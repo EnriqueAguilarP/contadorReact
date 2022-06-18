@@ -27,6 +27,7 @@ html, body{
 }
 .logo-imagen{
   height: 200px;
+  justify-content: center;
 }
 
 .contenedor-contador {

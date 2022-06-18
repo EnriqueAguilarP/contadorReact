@@ -2,14 +2,22 @@ import logo from './imagenes/logo.png';
 import './App.css';
 import Boton from './componentes/boton';
 import Contador from './componentes/contador';
+import { useState } from 'react';
 
 function App() {
+
+  //Hooks
+  const [numClick, setNumClick] = useState(0); 
+
+  //Funciones de botones
+
   const incrementarContador = () => {
-    console.log('Incrementó');
+    setNumClick(numClick + 1);
+    
   }
 
   const reiniciarContador = () => {
-    console.log('Reinició');
+    setNumClick(0);
   }
 
 
@@ -24,7 +32,7 @@ function App() {
       </div>
 
       <div className='contenedor-contador'>
-        <Contador numClick='2' 
+        <Contador numClick={numClick} 
         
         />
         
